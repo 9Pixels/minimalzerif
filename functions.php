@@ -1,7 +1,12 @@
 <?php
 
 /**
- *	Defines
+ *	Require Once
+ */
+require_once( 'includes/customizer.php' );
+
+/**
+ *	Define
  */
 define( 'GET_CHILDTHEME_DIRECTORY_URI', get_stylesheet_directory_uri() );
 
