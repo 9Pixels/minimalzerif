@@ -27,10 +27,6 @@ Text Domain: minimalzerif
 	color: #404040 !important;
 }
 
-.navbar-inverse .navbar-nav > li > a:hover {
-	color: #e96656 !important;
-}
-
 h1,
 h2 {
 	font-family: 'Roboto', sans-serif !important;
@@ -66,4 +62,32 @@ h2 {
 	color: #fff !important;
 	text-decoration: none;
 	border: 1px solid #404040;
+}
+
+.focus-box .service-icon:hover {
+	border: 10px solid #404040 !important;
+}
+
+.red-border-bottom:before {
+	background: #404040 !important;
+}
+
+.team-member .social-icons ul li a:hover {
+	color: #404040;
+}
+
+.entry-title:before {
+	background: #404040;
+}
+
+.widget .widget-title:before {
+	background: #404040;
+}
+
+.comment a {
+	color: #404040;
+}
+
+a {
+	color: #404040 !important;
 }
