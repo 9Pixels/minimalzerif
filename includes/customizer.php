@@ -8,6 +8,9 @@ if( !function_exists( 'minimalzerif_customizer' ) ) {
 		// Remove Panel
 		$wp_customize->remove_panel( 'panel_about' );
 		$wp_customize->remove_panel( 'panel_ribbons' );
+
+		// Remove Section
+		$wp_customize->remove_section( 'zerif_latestnews_section' );
 	}
 }
 ?>
