@@ -1,0 +1,107 @@
+/*
+Theme Name: MinimalZerif
+Theme URI:
+Description:
+Author: 9Pixels
+Author URI: http://www.9pixels.co
+Template: zerif-lite
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags:
+Text Domain: minimalzerif
+*/
+
+.navbar-inverse {
+	background-color: #fff !important;
+	border-bottom: none !important;
+}
+
+.navbar-brand {
+	height: 76px !important;
+	line-height: 60px !important;
+	padding: 7px 15px !important;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+	color: #404040 !important;
+}
+
+h1,
+h2 {
+	font-family: 'Roboto', sans-serif !important;
+	font-weight: 700 !important;
+}
+
+.testimonial {
+	background: #404040;
+}
+
+.custom-button {
+	background: transparent !important;
+	padding: 13px 35px 13px 35px !important;
+	border-radius: 4px !important;
+	border: 1px solid #fff !important;
+}
+
+.custom-button:hover {
+	background: #fff !important;
+	color: #404040 !important;
+}
+
+.comment-form #submit,
+.comment-reply-link {
+	background: transparent;
+	color: #404040 !important;
+	border: 1px solid #404040 !important;
+}
+
+.comment-form #submit:hover,
+.comment-reply-link:hover {
+	background: #404040;
+	color: #fff !important;
+	text-decoration: none;
+	border: 1px solid #404040;
+}
+
+.focus-box .service-icon {
+	border: none !important;
+}
+
+.red-border-bottom:before {
+	background: #404040 !important;
+}
+
+.team-member .social-icons ul li a:hover {
+	color: #404040;
+}
+
+.entry-title:before {
+	background: #404040;
+}
+
+.widget .widget-title:before {
+	background: #404040;
+}
+
+.comment a {
+	color: #404040;
+}
+
+.focus .row .focus-box {
+	border-right: 1px solid #eee;
+}
+
+.entry-content a {
+	color: #404040;
+	text-decoration: underline;
+}
+
+.entry-content a:hover {
+	color: #404040;
+	text-decoration: none;
+}
+
+ul.nav > li.current_page_item > a:before {
+	background: #404040;
+}
