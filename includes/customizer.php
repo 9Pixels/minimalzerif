@@ -7,6 +7,7 @@ if( !function_exists( 'minimalzerif_customizer' ) ) {
 	function minimalzerif_customizer( $wp_customize ) {
 		// Remove Panel
 		$wp_customize->remove_panel( 'panel_about' );
+		$wp_customize->remove_panel( 'panel_ribbons' );
 	}
 }
 ?>
