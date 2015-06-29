@@ -40,3 +40,30 @@ h2 {
 .testimonial {
 	background: #404040;
 }
+
+.custom-button {
+	background: transparent !important;
+	padding: 13px 35px 13px 35px !important;
+	border-radius: 4px !important;
+	border: 1px solid #fff !important;
+}
+
+.custom-button:hover {
+	background: #fff !important;
+	color: #404040 !important;
+}
+
+.comment-form #submit,
+.comment-reply-link {
+	background: transparent;
+	color: #404040 !important;
+	border: 1px solid #404040 !important;
+}
+
+.comment-form #submit:hover,
+.comment-reply-link:hover {
+	background: #404040;
+	color: #fff !important;
+	text-decoration: none;
+	border: 1px solid #404040;
+}
