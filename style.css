@@ -88,10 +88,20 @@ h2 {
 	color: #404040;
 }
 
-a {
-	color: #404040 !important;
-}
-
 .focus .row .focus-box {
 	border-right: 1px solid #eee;
+}
+
+.entry-content a {
+	color: #404040;
+	text-decoration: underline;
+}
+
+.entry-content a:hover {
+	color: #404040;
+	text-decoration: none;
+}
+
+ul.nav > li.current_page_item > a:before {
+	background: #404040;
 }
