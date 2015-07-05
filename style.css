@@ -105,3 +105,25 @@ Text Domain: minimalzerif
 ul.nav > li.current_page_item > a:before {
 	background: #404040;
 }
+
+.hamburger-icon {
+	margin: 20px -15px 10px 0;
+	float: right;
+}
+
+.hamburger-icon .fa {
+	font-size: 24px;
+}
+
+.hamburger-icon span {
+	margin-left: 5px;
+}
+
+.navbar-inverse .navbar-nav {
+	clear: both;
+}
+
+.navbar-inverse .navbar-nav > li {
+	margin-top: 0;
+	margin-bottom: 20px;
+}
