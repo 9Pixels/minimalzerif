@@ -138,6 +138,18 @@ ul.nav > li.current_page_item > a:before {
 	box-shadow: none !important;
 }
 
+.navbar-inverse.fixed {
+	background: #fff !important;
+}
+
+.navbar-inverse.fixed .navbar-nav > li > a {
+	color: #404040 !important;
+}
+
+.navbar-inverse.fixed .hamburger-icon {
+	color: #404040;
+}
+
 @media only screen and (max-width: 768px) {
 	.hamburger-icon {
 		display: none;

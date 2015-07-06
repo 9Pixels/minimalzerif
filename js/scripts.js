@@ -1,3 +1,5 @@
-jQuery( function($) {
-	$( window ).scroll( function() {});
+/**
+ *	jQuery Ready
+ */
+jQuery( document ).ready( function($) {
 });
