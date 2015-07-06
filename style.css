@@ -138,21 +138,25 @@ ul.nav > li.current_page_item > a:before {
 	box-shadow: none !important;
 }
 
-.navbar-inverse.fixed {
+.navbar-inverse.fix {
 	background: #fff !important;
 }
 
-.navbar-inverse.fixed .navbar-nav > li > a {
+.navbar-inverse.fix .navbar-nav > li > a {
 	color: #404040 !important;
 }
 
-.navbar-inverse.fixed .hamburger-icon {
+.navbar-inverse.fix .hamburger-icon {
 	color: #404040;
 }
 
 .zerif-copyright-box {
 	padding: 30px 0;
 	color: #939393;
+}
+
+.our-team {
+	border-top: 2px solid #404040;
 }
 
 @media only screen and (max-width: 768px) {
