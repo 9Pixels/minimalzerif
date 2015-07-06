@@ -11,6 +11,7 @@ if( !function_exists( 'minimalzerif_customizer' ) ) {
 
 		// Remove Section
 		$wp_customize->remove_section( 'zerif_latestnews_section' );
+		$wp_customize->remove_section( 'zerif_general_footer_section' );
 	}
 }
 ?>
