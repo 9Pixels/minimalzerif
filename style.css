@@ -108,6 +108,7 @@ ul.nav > li.current_page_item > a:before {
 
 .hamburger-icon {
 	margin: 20px -15px 10px 0;
+	color: #fff;
 	float: right;
 }
 
@@ -126,6 +127,15 @@ ul.nav > li.current_page_item > a:before {
 .navbar-inverse .navbar-nav > li {
 	margin-top: 0;
 	margin-bottom: 20px;
+}
+
+.navbar-inverse .navbar-nav > li a {
+	color: #fff !important;
+}
+
+.navbar-inverse {
+	background-color: transparent !important;
+	box-shadow: none !important;
 }
 
 @media only screen and (max-width: 768px) {

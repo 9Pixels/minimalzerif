@@ -6,11 +6,6 @@
 require_once( 'includes/customizer.php' );
 
 /**
- *	Define
- */
-define( 'GET_CHILDTHEME_DIRECTORY_URI', get_stylesheet_directory_uri() );
-
-/**
  *	Theme Setup
  */
 if( !function_exists( 'minimalzerif_theme_setup' ) ) {
@@ -26,7 +21,17 @@ if( !function_exists( 'minimalzerif_theme_setup' ) ) {
 if( !function_exists( 'minimalzerif_enqueue_styles' ) ) {
 	add_action( 'wp_enqueue_scripts', 'minimalzerif_enqueue_styles' );
 	function minimalzerif_enqueue_styles() {
-        wp_enqueue_style( 'minimalzerif-style', GET_CHILDTHEME_DIRECTORY_URI . '/style.css', array( 'zerif_style' ), '1.0.0', 'all' );
+        wp_enqueue_style( 'minimalzerif-style', get_stylesheet_directory_uri() . '/style.css', array( 'zerif_style' ), '1.0.0', 'all' );
         wp_enqueue_style( 'zerif_style', get_template_directory_uri() . '/style.css' );
+	}
+}
+
+/**
+ *	WP Enqueue Scripts
+ */
+if( !function_exists( 'minimalzerif_enqueue_scripts' ) ) {
+	add_action( 'wp_enqueue_scripts', 'minimalzerif_enqueue_scripts' );
+	function minimalzerif_enqueue_scripts() {
+		wp_enqueue_script( 'scripts', get_stylesheet_directory_uri() . '/js/scripts.js', array(), '1.0.0', true );
 	}
 }
