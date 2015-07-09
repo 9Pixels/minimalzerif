@@ -1,14 +1,13 @@
 /*
 Theme Name: MinimalZerif
-Theme URI:
-Description:
+Description: Free WordPress Theme for WP.org.
 Author: 9Pixels
 Author URI: http://www.9pixels.co
 Template: zerif-lite
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags:
+Tags: light, responsive-layout, one-column, custom-colors, custom-header, custom-menu, featured-images, sticky-post, translation-ready
 Text Domain: minimalzerif
 */
 
@@ -157,6 +156,10 @@ ul.nav > li.current_page_item > a:before {
 
 .our-team {
 	padding-top: 0;
+}
+
+.our-team .red-border-bottom:before {
+	bottom: -9px;
 }
 
 .our-team .container {
