@@ -23,7 +23,14 @@
 <?php if(isset($_POST['scrollPosition'])): ?>
 	<body <?php body_class(); ?> onLoad="window.scrollTo(0,<?php echo intval($_POST['scrollPosition']); ?>)">
 <?php else: ?>
-	<body <?php body_class(); ?> >
+	<?php
+	if( !is_home() ):
+		$home_class = 'menu-color';
+	else:
+		$home_class = '';
+	endif;
+	?>
+	<body <?php body_class( $home_class ); ?> >
 <?php endif; ?>
 
 <?php
@@ -39,53 +46,35 @@ endif;
 ?>
 
 <header id="home" class="header">
-	<div id="main-nav" class="navbar navbar-inverse bs-docs-nav" role="banner">
+	<div class="top-navigation">
 		<div class="container">
-			<div class="navbar-header responsive-logo">
-				<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-				<span class="sr-only"><?php _e('Toggle navigation','zerif-lite'); ?></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				</button>
-
+			<?php if( get_theme_mod( 'minimalzerif_disable_logoimage' ) != 1 ): ?>
+				<div class="logo-text">
+					<a href="<?php echo esc_url( home_url() ); ?>" class="logo-name" title="<?php bloginfo( 'name' ); ?>">
+						<?php bloginfo( 'name' ); ?>
+					</a><!--/.logo-name-->
+					<div class="logo-description">
+						<?php bloginfo( 'description' ); ?>
+					</div><!--/.logo-description-->
+				</div><!--/.logo-text-->
+			<?php else: ?>
+				<a class="logo-image" href="<?php echo esc_url( home_url() ); ?>" title="<?php bloginfo( 'title' ); ?>">
+				</a><!--/.a-->
+			<?php endif; ?>
+			<div class="hambuger-menu">
+				<i class="fa fa-bars"></i>
+				<span><?php _e( 'Menu', 'minimalzerif' ); ?></span>
+			</div><!--/.hambuger-menu-->
+			<nav class="header-menu">
 				<?php
-				$zerif_logo = get_theme_mod('zerif_logo');
-				if(isset($zerif_logo) && $zerif_logo != ""):
-					echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand">';
-						echo '<img src="'.$zerif_logo.'" alt="'.get_bloginfo('title').'">';
-					echo '</a>';
-				else:
-					echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand">';
-					
-						if( file_exists(get_stylesheet_directory()."/images/logo.png")):
-						
-							echo '<img src="'.get_stylesheet_directory_uri().'/images/logo.png" alt="'.get_bloginfo('title').'">';
-						
-						else:
-							
-							echo '<img src="'.get_template_directory_uri().'/images/logo.png" alt="'.get_bloginfo('title').'">';
-							
-						endif;
-					echo '</a>';
-				endif;
-				?>
-			</div>
-			<nav class="navbar-collapse bs-navbar-collapse collapse" role="navigation" id="site-navigation">
-				<div class="hamburger-icon">
-					<i class="fa fa-bars"></i>
-					<span><?php _e( 'Menu', 'minimalzerif' ); ?></span>
-				</div><!--/.hamburger-icon-->
-				<?php
-				wp_nav_menu(
-					array(
-						'theme_location'	=> 'primary',
-						'container'			=> false,
-						'menu_class'		=>'nav navbar-nav navbar-right responsive-nav main-nav-list',
-						'fallback_cb'		=> 'zerif_wp_page_menu'
-					)
+				$wp_nav_menu_args = array(
+					'theme_location'	=> 'primary',
+					'container'			=> false,
+					'menu_class'		=> 'clearfix',
+					'fallback_cb'		=> ''
 				);
+				wp_nav_menu( $wp_nav_menu_args );
 				?>
-			</nav>
-		</div>
-	</div>
+			</nav><!--/.header-menu-->
+		</div><!--/.container-->
+	</div><!--/.top-navigation-->
