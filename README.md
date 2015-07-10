@@ -6,7 +6,7 @@
  - **Author:** 9Pixels
  - **Author URI:** http://www.9pixels.co
  - **Template:** zerif-lite
- - **Version:** 1.0.1
+ - **Version:** 1.0.2
  - **License:** GNU General Public License v2 or later
  - **License URI:** http://www.gnu.org/licenses/gpl-2.0.html
  - **Tags:** light, responsive-layout, one-column, custom-colors, custom-header, custom-menu, featured-images, sticky-post, translation-ready
