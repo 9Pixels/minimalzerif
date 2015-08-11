@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MinimalZerif\n"
-"POT-Creation-Date: 2015-07-09 06:04+0300\n"
-"PO-Revision-Date: 2015-07-09 06:04+0300\n"
+"POT-Creation-Date: 2015-08-11 11:48+0300\n"
+"PO-Revision-Date: 2015-08-11 11:48+0300\n"
 "Last-Translator: \n"
 "Language-Team: 9Pixels <contact@9pixels.co>\n"
 "Language: en\n"
@@ -13,45 +13,53 @@ msgstr ""
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: footer.php:11
+#: footer.php:12
 msgid "powered by"
 msgstr ""
 
-#: front-page.php:64
+#: front-page.php:65
 msgid "* Please enter your name."
 msgstr ""
 
-#: front-page.php:72
+#: front-page.php:73
 msgid "* Please enter your email address."
 msgstr ""
 
-#: front-page.php:75
+#: front-page.php:76
 msgid "* You entered an invalid email address."
 msgstr ""
 
-#: front-page.php:83
+#: front-page.php:84
 msgid "* Please enter a subject."
 msgstr ""
 
-#: front-page.php:91
+#: front-page.php:92
 msgid "* Please enter a message."
 msgstr ""
 
-#: front-page.php:180
+#: front-page.php:179
 msgid "Thanks, your email was sent successfully!"
 msgstr ""
 
-#: front-page.php:182
+#: front-page.php:181
 msgid "Sorry, an error occured."
 msgstr ""
 
-#: header.php:46
-msgid "Toggle navigation"
+#: header.php:68
+msgid "Menu"
 msgstr ""
 
-#: header.php:77
-msgid "Menu"
+#: includes/customizer.php:26
+msgid "Disable logo text?"
+msgstr ""
+
+#: includes/customizer.php:37
+msgid "White Logo"
+msgstr ""
+
+#: includes/customizer.php:49
+msgid "Black Logo"
 msgstr ""
