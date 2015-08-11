@@ -34,7 +34,7 @@ if( !function_exists( 'minimalzerif_customizer' ) ) {
 			'default'			=> get_stylesheet_directory_uri() . '/images/white-logo.png'
 		) );
 		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'minimalzerif_logo', array(
-			'label'		=> __( 'White Logo', 'zerif-lite' ),
+			'label'		=> __( 'White Logo', 'minimalzerif' ),
 			'section'	=> 'zerif_general_section',
 			'settings'	=> 'minimalzerif_logo',
 			'priority'	=> 5
@@ -46,7 +46,7 @@ if( !function_exists( 'minimalzerif_customizer' ) ) {
 			'default'			=> get_stylesheet_directory_uri() . '/images/black-logo.png'
 		) );
 		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'minimalzerif_stickylogo', array(
-			'label'		=> __( 'Black Logo', 'zerif-lite' ),
+			'label'		=> __( 'Black Logo', 'minimalzerif' ),
 			'section'	=> 'zerif_general_section',
 			'settings'	=> 'minimalzerif_stickylogo',
 			'priority'	=> 6

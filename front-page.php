@@ -62,7 +62,7 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 
 			/* name */
 			if(trim($_POST['myname']) === ''):
-				$nameError = __('* Please enter your name.','zerif-lite');
+				$nameError = __('* Please enter your name.','minimalzerif');
 				$hasError = true;
 			else:
 				$name = trim($_POST['myname']);
@@ -70,10 +70,10 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 
 			/* email */
 			if(trim($_POST['myemail']) === ''):
-				$emailError = __('* Please enter your email address.','zerif-lite');
+				$emailError = __('* Please enter your email address.','minimalzerif');
 				$hasError = true;
 			elseif (!preg_match("/^[[:alnum:]][a-z0-9_.-]*@[a-z0-9.-]+\.[a-z]{2,4}$/i", trim($_POST['myemail']))) :
-				$emailError = __('* You entered an invalid email address.','zerif-lite');
+				$emailError = __('* You entered an invalid email address.','minimalzerif');
 				$hasError = true;
 			else:
 				$email = trim($_POST['myemail']);
@@ -81,7 +81,7 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 
 			/* subject */
 			if(trim($_POST['mysubject']) === ''):
-				$subjectError = __('* Please enter a subject.','zerif-lite');
+				$subjectError = __('* Please enter a subject.','minimalzerif');
 				$hasError = true;
 			else:
 				$subject = trim($_POST['mysubject']);
@@ -89,7 +89,7 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 
 			/* message */
 			if(trim($_POST['mymessage']) === ''):
-				$messageError = __('* Please enter a message.','zerif-lite');
+				$messageError = __('* Please enter a message.','minimalzerif');
 				$hasError = true;
 			else:
 				$message = stripslashes(trim($_POST['mymessage']));
@@ -176,9 +176,9 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 				<div class="row">
 					<?php
 						if(isset($emailSent) && $emailSent == true) :
-							echo '<div class="notification success"><p>'.__('Thanks, your email was sent successfully!','zerif-lite').'</p></div>';
+							echo '<div class="notification success"><p>'.__('Thanks, your email was sent successfully!','minimalzerif').'</p></div>';
 						elseif(isset($_POST['submitted'])):
-							echo '<div class="notification error"><p>'.__('Sorry, an error occured.','zerif-lite').'</p></div>';
+							echo '<div class="notification error"><p>'.__('Sorry, an error occured.','minimalzerif').'</p></div>';
 						endif;
 
 						if(isset($nameError) && $nameError != '') :
