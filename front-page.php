@@ -150,4 +150,24 @@ if( isset($zerif_testimonials_show) && $zerif_testimonials_show != 1 ):
 endif;
 }
 ?>
+<?php if( get_theme_mod( 'zerif_contactus_show' ) != 1 ): ?>
+	<section class="contact-us" id="contact">
+		<div class="container">
+			<?php if( get_theme_mod( 'zerif_contactus_title', __( 'Get in touch', 'minimalzerif' ) ) ): ?>
+				<div class="section-header">
+					<?php if( get_theme_mod( 'zerif_contactus_title', __( 'Get in touch', 'minimalzerif' ) ) ): ?>
+						<h2 class="white-text"><?php echo esc_attr( get_theme_mod( 'zerif_contactus_title', __( 'Get in touch', 'minimalzerif' ) ) ); ?></h2>
+					<?php endif; ?>
+					<?php if( get_theme_mod( 'zerif_contactus_subtitle' ) ): ?>
+						<h6 class="white-text"><?php echo esc_attr( get_theme_mod( 'zerif_contactus_subtitle' ) ); ?></h6>
+					<?php endif; ?>
+				</div><!--/.section-header-->
+			<?php endif; ?>
+			<?php if( get_theme_mod( 'minimalzerif_contactus_entry', __( '<b>Eleven Madison Park</b><br />11 Madison Ave<br />New York, NY 10010<br />U.S.A.<br />', 'minimalzerif' ) ) ): ?>
+				<address>
+					<?php echo get_theme_mod( 'minimalzerif_contactus_entry', __( '<b>Eleven Madison Park</b><br />11 Madison Ave<br />New York, NY 10010<br />U.S.A.<br />', 'minimalzerif' ) ); ?>
+				</address>
+			<?php endif; ?>		</div><!--/.container-->
+	</section><!--/.contact-us#contact-->
+<?php endif; ?>
 <?php get_footer(); ?>
