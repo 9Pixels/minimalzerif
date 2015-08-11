@@ -12,6 +12,7 @@ if( !function_exists( 'minimalzerif_customizer' ) ) {
 		// Remove Section
 		$wp_customize->remove_section( 'zerif_latestnews_section' );
 		$wp_customize->remove_section( 'zerif_general_footer_section' );
+		$wp_customize->remove_section( 'zerif_contactus_section' );
 
 		// Remove Setting & Control
 		$wp_customize->remove_setting( 'zerif_logo' );

@@ -130,113 +130,24 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 <div id="content" class="site-content">
 
 <?php
+/* OUR FOCUS SECTION */
+$zerif_ourfocus_show = get_theme_mod('zerif_ourfocus_show');
 
-	/* OUR FOCUS SECTION */
-	$zerif_ourfocus_show = get_theme_mod('zerif_ourfocus_show');
+if( isset($zerif_ourfocus_show) && $zerif_ourfocus_show != 1 ):
+	include get_template_directory() . "/sections/our_focus.php";
+endif;
 
-	if( isset($zerif_ourfocus_show) && $zerif_ourfocus_show != 1 ):
-		include get_template_directory() . "/sections/our_focus.php";
-	endif;
+/* OUR TEAM */
+$zerif_ourteam_show = get_theme_mod('zerif_ourteam_show');
+if( isset($zerif_ourteam_show) && $zerif_ourteam_show != 1 ):
+	include get_template_directory() . "/sections/our_team.php";
+endif;
 
-	/* OUR TEAM */
-	$zerif_ourteam_show = get_theme_mod('zerif_ourteam_show');
-	if( isset($zerif_ourteam_show) && $zerif_ourteam_show != 1 ):
-		include get_template_directory() . "/sections/our_team.php";
-	endif;
-
-	/* TESTIMONIALS */
-	$zerif_testimonials_show = get_theme_mod('zerif_testimonials_show');
-	if( isset($zerif_testimonials_show) && $zerif_testimonials_show != 1 ):
-		include get_template_directory() . "/sections/testimonials.php";
-	endif;
-
-	/* CONTACT US */
-	$zerif_contactus_show = get_theme_mod('zerif_contactus_show');
-	if( isset($zerif_contactus_show) && $zerif_contactus_show != 1 ):
-		?>
-		<section class="contact-us" id="contact">
-			<div class="container">
-				<!-- SECTION HEADER -->
-				<div class="section-header">
-					<?php
-						$zerif_contactus_title = get_theme_mod('zerif_contactus_title','Get in touch');
-						if ( !empty($zerif_contactus_title) ):
-							echo '<h2 class="white-text">'. esc_html( $zerif_contactus_title ) .'</h2>';
-						endif;
-					
-						$zerif_contactus_subtitle = get_theme_mod('zerif_contactus_subtitle');
-						if(isset($zerif_contactus_subtitle) && $zerif_contactus_subtitle != ""):
-							echo '<h6 class="white-text">'. esc_html( $zerif_contactus_subtitle ) .'</h6>';
-						endif;
-					?>
-				</div>
-				<!-- / END SECTION HEADER -->
-
-				<!-- CONTACT FORM-->
-				<div class="row">
-					<?php
-						if(isset($emailSent) && $emailSent == true) :
-							echo '<div class="notification success"><p>'.__('Thanks, your email was sent successfully!','minimalzerif').'</p></div>';
-						elseif(isset($_POST['submitted'])):
-							echo '<div class="notification error"><p>'.__('Sorry, an error occured.','minimalzerif').'</p></div>';
-						endif;
-
-						if(isset($nameError) && $nameError != '') :
-							echo '<div class="notification error"><p>'.esc_html($nameError).'</p></div>';
-						endif;
-						if(isset($emailError) && $emailError != '') :
-							echo '<div class="notification error"><p>'.esc_html($emailError).'</p></div>';
-						endif;
-
-						if(isset($subjectError) && $subjectError != '') :
-							echo '<div class="notification error"><p>'.esc_html($subjectError).'</p></div>';
-						endif;
-
-						if(isset($messageError) && $messageError != '') :
-							echo '<div class="notification error"><p>'.esc_html($messageError).'</p></div>';
-						endif;
-
-					?>
-
-					<form role="form" method="POST" action="" onSubmit="this.scrollPosition.value=(document.body.scrollTop || document.documentElement.scrollTop)" class="contact-form">
-						<input type="hidden" name="scrollPosition">
-						<input type="hidden" name="submitted" id="submitted" value="true" />
-						<div class="col-lg-4 col-sm-4" data-scrollreveal="enter left after 0s over 1s">
-							<input required="required" type="text" name="myname" placeholder="Your Name" class="form-control input-box" value="<?php if(isset($_POST['myname'])) echo esc_attr($_POST['myname']);?>">
-						</div>
-						<div class="col-lg-4 col-sm-4" data-scrollreveal="enter left after 0s over 1s">
-							<input required="required" type="email" name="myemail" placeholder="Your Email" class="form-control input-box" value="<?php if(isset($_POST['myemail'])) echo is_email($_POST['myemail']) ? $_POST['myemail'] : ""; ?>">
-						</div>
-						<div class="col-lg-4 col-sm-4" data-scrollreveal="enter left after 0s over 1s">
-							<input required="required" type="text" name="mysubject" placeholder="Subject" class="form-control input-box" value="<?php if(isset($_POST['mysubject'])) echo esc_attr($_POST['mysubject']);?>">
-						</div>
-
-						<div class="col-lg-12 col-sm-12" data-scrollreveal="enter right after 0s over 1s">
-							<textarea name="mymessage" class="form-control textarea-box" placeholder="Your Message"><?php if(isset($_POST['mymessage'])) { echo esc_html($_POST['mymessage']); } ?></textarea>
-						</div>
-	
-						<?php
-							$zerif_contactus_button_label = get_theme_mod('zerif_contactus_button_label','Send Message');
-							if( !empty($zerif_contactus_button_label) ):
-								echo '<button class="btn btn-primary custom-button red-btn" type="submit" data-scrollreveal="enter left after 0s over 1s">'.$zerif_contactus_button_label.'</button>';
-							endif;
-						?>
-						
-						<?php 
-							$zerif_contactus_sitekey = get_theme_mod('zerif_contactus_sitekey');
-							$zerif_contactus_secretkey = get_theme_mod('zerif_contactus_secretkey');
-							$zerif_contactus_recaptcha_show = get_theme_mod('zerif_contactus_recaptcha_show');
-
-							if( isset($zerif_contactus_recaptcha_show) && $zerif_contactus_recaptcha_show != 1 && !empty($zerif_contactus_sitekey) && !empty($zerif_contactus_secretkey) ) :
-								echo '<div class="g-recaptcha" data-sitekey="' . $zerif_contactus_sitekey . '"></div>';
-							endif;
-						?>
-					</form>
-				</div>
-				<!-- / END CONTACT FORM-->
-			</div> <!-- / END CONTAINER -->
-		</section> <!-- / END CONTACT US SECTION-->
-		<?php
-	endif;
+/* TESTIMONIALS */
+$zerif_testimonials_show = get_theme_mod('zerif_testimonials_show');
+if( isset($zerif_testimonials_show) && $zerif_testimonials_show != 1 ):
+	include get_template_directory() . "/sections/testimonials.php";
+endif;
 }
-get_footer(); ?>
+?>
+<?php get_footer(); ?>
