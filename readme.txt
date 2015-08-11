@@ -1,16 +1,8 @@
 MinimalZerif
 
-Details:
- - Theme name: MinimalZerif
- - Description: Free WordPress Theme for WP.org.
- - Author: 9Pixels
- - Author URI: http://www.9pixels.co
- - Template: zerif-lite
- - Version: 1.0.0
- - License: GNU General Public License v2 or later
- - License URI: http://www.gnu.org/licenses/gpl-2.0.html
- - Tags: light, responsive-layout, one-column, custom-colors, custom-header, custom-menu, featured-images, sticky-post, translation-ready
- - Text Domain: minimalzerif
+== Install Notes ==
+
+Please note that you need to install first the main theme, Zerif Lite: https://wordpress.org/themes/zerif-lite/.
 
 License:
 
