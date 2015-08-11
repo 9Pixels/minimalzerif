@@ -2,7 +2,8 @@
 /**
  *	The template for displaying the Front Page.
  *
- *	@package minimalzerif
+ *	@package WordPress
+ *	@subpackage MinimalZerif
  */
 ?>
 <?php get_header(); ?>
@@ -140,10 +141,8 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 	/* OUR TEAM */
 	$zerif_ourteam_show = get_theme_mod('zerif_ourteam_show');
 	if( isset($zerif_ourteam_show) && $zerif_ourteam_show != 1 ):
-
 		include get_template_directory() . "/sections/our_team.php";
 	endif;
-
 
 	/* TESTIMONIALS */
 	$zerif_testimonials_show = get_theme_mod('zerif_testimonials_show');

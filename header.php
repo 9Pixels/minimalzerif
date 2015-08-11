@@ -2,7 +2,8 @@
 /**
  *	The template for displaying the Header.
  *
- *	@package minimalzerif
+ *	@package WordPress
+ *	@subpackage MinimalZerif
  */
 ?>
 <!DOCTYPE html>
@@ -50,7 +51,7 @@ endif;
 		<div class="container">
 			<?php if( get_theme_mod( 'minimalzerif_disable_logoimage' ) != 1 ): ?>
 				<div class="logo-text">
-					<a href="<?php echo esc_url( home_url() ); ?>" class="logo-name" title="<?php bloginfo( 'name' ); ?>">
+					<a href="<?php echo esc_url( get_site_url() ); ?>" class="logo-name" title="<?php bloginfo( 'name' ); ?>">
 						<?php bloginfo( 'name' ); ?>
 					</a><!--/.logo-name-->
 					<div class="logo-description">
@@ -58,7 +59,7 @@ endif;
 					</div><!--/.logo-description-->
 				</div><!--/.logo-text-->
 			<?php else: ?>
-				<a class="logo-image" href="<?php echo esc_url( home_url() ); ?>" title="<?php bloginfo( 'title' ); ?>">
+				<a class="logo-image" href="<?php echo esc_url( get_site_url() ); ?>" title="<?php bloginfo( 'title' ); ?>">
 				</a><!--/.a-->
 			<?php endif; ?>
 			<?php if( has_nav_menu( 'primary' ) ): ?>

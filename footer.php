@@ -2,7 +2,8 @@
 /**
  *	The template for displaying the Footer.
  *
- *	@package minimalzerif
+ *	@package WordPress
+ *	@package MinimalZerif
  */
 ?>		
 		<footer id="footer">
