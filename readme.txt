@@ -14,9 +14,7 @@ Details:
 
 License:
 
-MinimalZerif WordPress Theme, Copyright (C) 2015 [9Pixels] (http://www.9pixels.co).
-
-This theme, like WordPress, is licensed under the GPL. Use it to make something cool, have fun, and share what you've learned with others.
+This theme is a Child Theme of, and Incorporates Code from Zerif Lite WordPress Theme, Copyright (C) 2014 ThemeIsle.com, Zerif Lite WordPress theme is licensed under the GPL3.
 
 Unless otherwise specified, all the theme files, scripts and images are licensed under GNU General Public License.
 The exceptions to this license are as follows:
