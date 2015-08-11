@@ -61,20 +61,22 @@ endif;
 				<a class="logo-image" href="<?php echo esc_url( home_url() ); ?>" title="<?php bloginfo( 'title' ); ?>">
 				</a><!--/.a-->
 			<?php endif; ?>
-			<div class="hambuger-menu">
-				<i class="fa fa-bars"></i>
-				<span><?php _e( 'Menu', 'minimalzerif' ); ?></span>
-			</div><!--/.hambuger-menu-->
-			<nav class="header-menu">
-				<?php
-				$wp_nav_menu_args = array(
-					'theme_location'	=> 'primary',
-					'container'			=> false,
-					'menu_class'		=> 'clearfix',
-					'fallback_cb'		=> ''
-				);
-				wp_nav_menu( $wp_nav_menu_args );
-				?>
-			</nav><!--/.header-menu-->
+			<?php if( has_nav_menu( 'primary' ) ): ?>
+				<div class="hambuger-menu">
+					<i class="fa fa-bars"></i>
+					<span><?php _e( 'Menu', 'minimalzerif' ); ?></span>
+				</div><!--/.hambuger-menu-->
+				<nav class="header-menu">
+					<?php
+					$wp_nav_menu_args = array(
+						'theme_location'	=> 'primary',
+						'container'			=> false,
+						'menu_class'		=> 'clearfix',
+						'fallback_cb'		=> ''
+					);
+					wp_nav_menu( $wp_nav_menu_args );
+					?>
+				</nav><!--/.header-menu-->
+			<?php endif; ?>
 		</div><!--/.container-->
 	</div><!--/.top-navigation-->
