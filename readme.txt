@@ -62,7 +62,8 @@ The exceptions to this license are as follows:
 		  
 		 * images/testimonial3.jpg
 			Source: https://download.unsplash.com/photo-1428471226620-c2698eadf413
- 
+ 	Screenshot image:
+ 	CC0 License - http://www.pexels.com/photo/nature-sunset-person-woman-403/
  * Font Awesome
  
 	License: SIL OFL 1.1
