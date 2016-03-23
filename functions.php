@@ -32,17 +32,7 @@ if( !function_exists( 'minimalzerif_enqueue_styles' ) ) {
 if( !function_exists( 'minimalzerif_enqueue_scripts' ) ) {
 	add_action( 'wp_enqueue_scripts', 'minimalzerif_enqueue_scripts' );
 	function minimalzerif_enqueue_scripts() {
-		wp_enqueue_script( 'scripts', get_stylesheet_directory_uri() . '/js/scripts.js', array(), '1.0.2', true );
-	}
-}
-
-/**
- *	WP Dequeue Scripts
- */
-if( !function_exists( 'minimalzerif_dequeue_scripts' ) ) {
-	add_action( 'wp_print_scripts', 'minimalzerif_dequeue_scripts', 100 );
-	function minimalzerif_dequeue_scripts() {
-		wp_dequeue_script( 'zerif_script' );
+		wp_enqueue_script( 'minimalzerif-scripts', get_stylesheet_directory_uri() . '/js/minimalzerif-scripts.js', array(), '1.0.2', true );
 	}
 }
 
